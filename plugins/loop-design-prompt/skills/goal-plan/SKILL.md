@@ -14,7 +14,7 @@ Use the request and the repository material in scope. Inspect enough current sou
 Keep these distinctions:
 
 - User direction owns the requested outcome and the authorization.
-- Current source and reproducible evidence own current facts.
+- Current source and reproducible evidence own current facts, and that same source owns the design already in place — data shapes and types, routes, layout and naming conventions, existing empty and error states, and the dependency set — whether or not a design or product document records it.
 - Repository instructions own local workflow, validation, and protected boundaries.
 - The prompt names mutable authority and derives task order, commands, retry policy, and roles from the current version of that authority.
 
@@ -34,6 +34,10 @@ A structural count or format the request names settles the shape of that surface
 
 Prefer reconciliation against an external or current fact over self-authored assertions. Bind the expected value to a path independent of the code under test, so the comparison has two separate sides.
 
+## Fit the design already in place
+
+Current source answers two separate questions: how far the work has progressed, and how the thing is already built. Read it for both, and name what the code has already settled so new work lands inside it rather than beside it. Where the request can be met only by departing from that established design, the departure is a scope decision the human owns rather than a detail settled while building.
+
 ## Human decisions lead
 
 When an unresolved human decision and a size answer both apply, the human decision leads the result, because resolving it can change which prompt fits. Resolving it is a gate rather than a destination, so name the primitive each choice would unlock and carry the contract that approval would authorize, letting the human see in one place whether approving turns the work into a durable objective. Ask for that approval once: the package is the request, and an approved package enters the contract as settled values rather than a second confirmation.
@@ -46,7 +50,7 @@ For an approval package, offer the smallest complete set and only materially dis
 
 Return the result first, then its matching body:
 
-- **Durable objective** — one cohesive inline instruction containing one outcome; named authority and precedence; dynamic next-checkpoint derivation; current-state validation and protected boundaries; a verifiable stopping condition; and a closed list of pause and resume triggers, with every decision the human already approved carried as a settled value. Hand this to `execute`.
+- **Durable objective** — one cohesive inline instruction containing one outcome; named authority and precedence; dynamic next-checkpoint derivation; the established design new work stays within; current-state validation and protected boundaries; a verifiable stopping condition; and a closed list of pause and resume triggers, with every decision the human already approved carried as a settled value. Hand this to `execute`.
 - **Ordinary prompt** — the single-turn request that covers the work, with its own observable done-criterion.
 - **Approval request** — the decision needed, one recommended package, named alternatives, each choice's authorization effect and unlocked primitive, and the contract approval would authorize. Close with **Approval state: pending** and a direct request to approve or select.
 - **Source first** — the artifact that must exist before the requested conversion becomes real.
@@ -61,6 +65,7 @@ A durable-objective result lets a fresh agent answer all of these from the instr
 - What single outcome am I pursuing?
 - What source wins when instructions disagree?
 - How do I determine the next checkpoint from current state?
+- Which design does the current source already establish for my work to fit, and what departure would belong to the human?
 - What current evidence proves completion while verifier protections stay intact?
 - Which action or decision requires me to pause for a human?
 
