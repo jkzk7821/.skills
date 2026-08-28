@@ -1,0 +1,29 @@
+{
+  "name": "loop-design-prompt",
+  "version": "0.1.0",
+  "description": "Design bounded Codex goals and render approved contracts as concise /goal prompts.",
+  "author": {
+    "name": "jkzk7821",
+    "url": "https://github.com/jkzk7821"
+  },
+  "homepage": "https://github.com/jkzk7821/.skills",
+  "repository": "https://github.com/jkzk7821/.skills",
+  "keywords": [
+    "codex",
+    "goal",
+    "agent-loop"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Loop Design Prompt",
+    "shortDescription": "Design bounded long-running Codex goals.",
+    "longDescription": "Design durable goal contracts and convert approved contracts into concise /goal prompts with explicit authority, completion, and human-decision boundaries.",
+    "developerName": "jkzk7821",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Design a durable Codex goal from this request.",
+      "Convert this approved goal contract into a /goal prompt."
+    ]
+  }
+}

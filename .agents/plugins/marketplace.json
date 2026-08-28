@@ -1,0 +1,20 @@
+{
+  "name": "jkzk7821-skills",
+  "interface": {
+    "displayName": "Jkzk7821 Skills"
+  },
+  "plugins": [
+    {
+      "name": "loop-design-prompt",
+      "source": {
+        "source": "local",
+        "path": "./plugins/loop-design-prompt"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
