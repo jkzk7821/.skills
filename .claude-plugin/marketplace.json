@@ -1,0 +1,15 @@
+{
+  "name": "jkzk7821-skills",
+  "owner": {
+    "name": "jkzk7821",
+    "url": "https://github.com/jkzk7821"
+  },
+  "description": "Personal agent skills for Codex and Claude Code.",
+  "plugins": [
+    {
+      "name": "loop-design-prompt",
+      "source": "./plugins/loop-design-prompt",
+      "description": "Design bounded long-running Codex goals."
+    }
+  ]
+}
