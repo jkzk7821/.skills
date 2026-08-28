@@ -17,8 +17,9 @@ Each row below is answered against the contract as written and the current state
 | 2 | Vague or self-judged completion | Can current evidence answer done or not-done without resting on “looks right”? | Add a verifiable end state bound to deterministic evidence. |
 | 3 | Verifier is gameable | Could the builder pass by weakening tests, boundaries, mocks, or acceptance criteria? | Pair the done criterion with protected boundaries and reconciliation. |
 | 4 | Prompt becomes a stale shadow runbook | Does it duplicate mutable phases, task lists, commands, retry caps, or roles already owned elsewhere? | Point to the authority, state precedence, and derive from current state. |
-| 5 | A human decision is guessed | Is any policy, approval, scope, permission, or irreversible action still open at launch or at runtime? | Settle known choices first and encode a pause boundary for the rest. |
+| 5 | A human decision is guessed | Is any policy, approval, scope, permission, or irreversible action still open at launch or at runtime? | Settle known choices first and encode a closed pause list for the rest. |
 | 6 | Acceptance surface drifts to a stand-in | Does the validated surface match the one the user named, or a demonstration of it? | Re-anchor objective and validation to the named surface, or return the surface choice to the human. |
+| 7 | Loop stalls on decisions it owns | Is the pause trigger an open predicate ("when required", "any human decision"), or does it re-ask what approval already settled? | Close the pause list, carry approved decisions as settled values, and leave the remainder to the agent with the decision recorded. |
 
 Checklist before launch:
 
@@ -29,7 +30,7 @@ Checklist before launch:
 - [ ] Current checkpoint derived dynamically
 - [ ] Verifiable end state bound to current evidence
 - [ ] Protected boundaries hold even when weakening them would pass the verifier
-- [ ] Explicit pause and resume conditions
+- [ ] Pause triggers are a closed list; approved decisions are carried as settled and everything else is the agent's call
 - [ ] Authority for external or irreversible actions is the same as before launch
 - [ ] The human keeps goal, policy, and final-risk judgment
 
@@ -39,9 +40,9 @@ A reviewed contract carries four semantic sentences:
 
 ```text
 /goal Read [relevant authorities] and continue [one durable objective] from [current checkpoint or its derivation rule].
-Treat [actual current state and named authorities] as authoritative over this summary, and re-derive the next checkpoint from them.
-Stop only when [verifiable current-state end condition]; report the evidence and request final human confirmation when required.
-At [blocker, permission, approval, policy, or scope boundary], pause and report the cause, impact, and resume condition.
+Treat [actual current state and named authorities] as authoritative over this summary, re-derive the next checkpoint from them, and treat [decisions already approved] as settled.
+Stop only when [verifiable current-state end condition] and report the evidence[; request final confirmation only where a named authority requires sign-off].
+Pause only at [closed list of remaining triggers] and report the cause, impact, and resume condition; decide everything else from the authorities and current state and record it.
 ```
 
 | Sentence | Contains |
@@ -64,3 +65,5 @@ Completion rests on the evidence the stopping condition names. When that evidenc
 Retry and repair limits come from the authority when it defines them. Otherwise the smallest cap justified by an actually repeatable failure mode fits, expressed as the condition that repeats rather than as a universal number.
 
 The agent may conclude that the operational stopping condition is met and report the evidence. Human acceptance, policy approval, merge, release, publication, spending, and other authority it was not given remain with the human, and permission to pursue the objective leaves those unchanged.
+
+Outside that boundary and the contract's own pause list, the agent decides. A question the objective, the named authorities, and current state can answer is operational: decide it, proceed, and record the decision in the report. A choice the human settled while approving the contract is carried as a value, not re-confirmed.

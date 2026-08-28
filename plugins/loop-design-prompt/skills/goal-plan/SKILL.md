@@ -36,7 +36,7 @@ Prefer reconciliation against an external or current fact over self-authored ass
 
 ## Human decisions lead
 
-When an unresolved human decision and a size answer both apply, the human decision leads the result, because resolving it can change which prompt fits. Resolving it is a gate rather than a destination, so name the primitive each choice would unlock and carry the contract that approval would authorize, letting the human see in one place whether approving turns the work into a durable objective.
+When an unresolved human decision and a size answer both apply, the human decision leads the result, because resolving it can change which prompt fits. Resolving it is a gate rather than a destination, so name the primitive each choice would unlock and carry the contract that approval would authorize, letting the human see in one place whether approving turns the work into a durable objective. Ask for that approval once: the package is the request, and an approved package enters the contract as settled values rather than a second confirmation.
 
 Human-owned product, policy, safety, and permission choices take precedence over eventual task size. A vague qualitative change to a protected surface such as login, authentication, authorization, payments, or destructive controls stays a human decision. Source absence by itself leaves an otherwise clear size answer unchanged.
 
@@ -46,7 +46,7 @@ For an approval package, offer the smallest complete set and only materially dis
 
 Return the result first, then its matching body:
 
-- **Durable objective** — one cohesive inline instruction containing one outcome; named authority and precedence; dynamic next-checkpoint derivation; current-state validation and protected boundaries; a verifiable stopping condition; and pause and resume conditions. Hand this to `execute`.
+- **Durable objective** — one cohesive inline instruction containing one outcome; named authority and precedence; dynamic next-checkpoint derivation; current-state validation and protected boundaries; a verifiable stopping condition; and a closed list of pause and resume triggers, with every decision the human already approved carried as a settled value. Hand this to `execute`.
 - **Ordinary prompt** — the single-turn request that covers the work, with its own observable done-criterion.
 - **Approval request** — the decision needed, one recommended package, named alternatives, each choice's authorization effect and unlocked primitive, and the contract approval would authorize. Close with **Approval state: pending** and a direct request to approve or select.
 - **Source first** — the artifact that must exist before the requested conversion becomes real.
