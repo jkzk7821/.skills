@@ -64,12 +64,14 @@ Find the sources that own:
 | Objective and scope | goal/spec/issue |
 | Rules and protected boundaries | project instructions/policy |
 | Current checkpoint | handoff/state/current source |
+| Existing design | current source itself — data shapes and types, routes, layout and naming conventions, existing empty/error states, dependency set — together with any design or product document that records them |
 | Verification | tests, build, reconciliation source, runtime evidence |
 
 State their precedence when more than one exists. The goal prompt is an **index into these sources**, not a shadow copy of them.
 
 - If an authoritative source already owns a mutable task list, phase order, command set, retry limit, or role contract, point to it instead of restating it.
 - Tell Codex to derive the next checkpoint from the current authority and actual state.
+- Current source answers two separate questions: how far the work has progressed, and how the thing is already built. Read it for both. Where the code itself already establishes a data shape, a route pattern, a styling or naming convention, an empty or error state, or a dependency set, that established design is authority for how new work fits, whether or not a document also records it. Where the request can be met only by departing from it, the departure is a scope decision the human owns rather than a detail settled while building.
 - If no source owns a necessary constraint, put that constraint in the goal itself.
 
 ### Step 2 · Define one durable objective and stopping condition
@@ -111,7 +113,7 @@ Use this shape:
 
 ```text
 /goal Read [instruction, objective, and current-state authorities] and continue [one durable objective] from [current checkpoint].
-Treat [current source and named authorities] as authoritative over this summary, re-derive the next checkpoint from them, and treat [decisions already approved] as settled.
+Treat [current source and named authorities] as authoritative over this summary, re-derive the next checkpoint from them, keep new work within the design they already establish, and treat [decisions already approved] as settled.
 Stop only when [verifiable end state] and report the evidence[; request final confirmation only where a named authority requires sign-off].
 Pause only at [closed list of remaining triggers] and report the cause, impact, and resume condition; decide everything else from the authorities and current state and record it.
 ```
@@ -133,6 +135,7 @@ A red answer to any row sends the contract back for revision.
 | 5 | Agent guesses a human decision | Is any policy, approval, scope, permission, or irreversible action unresolved at launch or runtime? | Resolve known choices first; encode a pause boundary for the rest. |
 | 6 | Acceptance surface drifts to a stand-in | Does the validated surface match the surface the user named, or a demonstration of it? | Re-anchor the objective and validation to the named surface, or return the surface choice to the human. |
 | 7 | Loop stalls on decisions it owns | Is the pause trigger an open predicate ("when required", "any human decision"), or does it re-ask what approval already settled? | Close the pause list, carry approved decisions as settled values, and leave the remainder to the agent with the decision recorded. |
+| 8 | New work drifts from the design already in place | Does the contract fit and name the data shapes, conventions, existing states, and dependency set the current source establishes, or does it read that source only for how far the work has got? | Anchor the work to the established design, or return the departure to the human as a scope decision. |
 
 ### Final review checklist
 
@@ -141,6 +144,7 @@ A red answer to any row sends the contract back for revision.
 - [ ] Objective and validation stay on the user-named acceptance surface
 - [ ] Named authority and precedence
 - [ ] Current checkpoint derived dynamically
+- [ ] New work fits the design the current source already establishes, or the departure is a human decision
 - [ ] Verifiable end state bound to current evidence
 - [ ] Protected boundaries cannot be weakened to pass
 - [ ] Pause triggers are a closed list; approved decisions are carried as settled and everything else is the agent's call
