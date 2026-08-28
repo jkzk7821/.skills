@@ -5,7 +5,7 @@
 ## Codex 설치
 
 ```bash
-codex plugin marketplace add jkzk7821/.skills --ref feat/loop-design-prompt-codex-plugin
+codex plugin marketplace add jkzk7821/.skills --ref loop-design-prompt
 codex plugin add loop-design-prompt@jkzk7821-skills
 ```
 
