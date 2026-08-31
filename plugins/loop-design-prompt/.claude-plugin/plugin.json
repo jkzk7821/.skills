@@ -1,7 +1,7 @@
 {
   "name": "loop-design-prompt",
   "version": "0.1.0",
-  "description": "Design bounded Codex goals and render approved contracts as concise /goal prompts.",
+  "description": "Design bounded long-running agent goals and render approved contracts as concise /goal prompts.",
   "author": {
     "name": "jkzk7821",
     "url": "https://github.com/jkzk7821"

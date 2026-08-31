@@ -9,7 +9,7 @@
     {
       "name": "loop-design-prompt",
       "source": "./plugins/loop-design-prompt",
-      "description": "Design bounded long-running Codex goals."
+      "description": "Design bounded long-running agent goals."
     }
   ]
 }

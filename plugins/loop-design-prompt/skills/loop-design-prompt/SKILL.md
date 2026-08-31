@@ -7,12 +7,12 @@ metadata:
 
 # Loop Design Prompt
 
-> **Premise.** Codex `/goal` already provides persistence across turns. This skill designs the contract attached to that mechanism: one durable objective, authoritative context, verifiable completion, and safe pause boundaries. Do not recreate the persistence mechanism or copy an entire runbook into the goal prompt.
+> **Premise.** The agent harness already provides persistence across turns via `/goal`. This skill designs the contract attached to that mechanism: one durable objective, authoritative context, verifiable completion, and safe pause boundaries. Do not recreate the persistence mechanism or copy an entire runbook into the goal prompt.
 
 ## When to use / not
 
 **Use it when:**
-- A finite task is too large for one normal turn and needs Codex to keep making scoped progress.
+- A finite task is too large for one normal turn and needs the agent to keep making scoped progress.
 - You are reviewing a goal or autonomous loop for spinning, stale instructions, verifier gaming, or guessed policy decisions.
 
 **Don't use it for:**
@@ -43,7 +43,7 @@ Use `/goal` only when all are true:
 1. There is **one durable objective**, not an unrelated backlog.
 2. The work is larger than one normal turn but has a finite end state.
 3. Completion can be verified from commands, artifacts, current source, or another authoritative fact.
-4. Codex has the tools and permission to make meaningful progress without continuous steering.
+4. The agent has the tools and permission to make meaningful progress without continuous steering.
 
 Otherwise use a normal prompt, split the work, resolve the missing human decision first, or use an ongoing monitor/schedule.
 
@@ -70,7 +70,7 @@ Find the sources that own:
 State their precedence when more than one exists. The goal prompt is an **index into these sources**, not a shadow copy of them.
 
 - If an authoritative source already owns a mutable task list, phase order, command set, retry limit, or role contract, point to it instead of restating it.
-- Tell Codex to derive the next checkpoint from the current authority and actual state.
+- Tell the agent to derive the next checkpoint from the current authority and actual state.
 - Current source answers two separate questions: how far the work has progressed, and how the thing is already built. Read it for both. Where the code itself already establishes a data shape, a route pattern, a styling or naming convention, an empty or error state, or a dependency set, that established design is authority for how new work fits, whether or not a document also records it. Where the request can be met only by departing from it, the departure is a scope decision the human owns rather than a detail settled while building.
 - If no source owns a necessary constraint, put that constraint in the goal itself.
 
@@ -78,7 +78,7 @@ State their precedence when more than one exists. The goal prompt is an **index 
 
 A good contract has five fields:
 
-1. **Objective** — one outcome Codex should achieve.
+1. **Objective** — one outcome the agent should achieve.
 2. **Authority and current state** — what to read first and what wins over the prompt summary.
 3. **Validation** — commands or artifacts that prove progress against the current source state.
 4. **Boundaries** — what must not change or which actions remain unauthorized.
@@ -103,7 +103,7 @@ Prefer reconciliation against an external or current fact over self-authored ass
 - Use retry and repair limits defined by the authority. If none exist, add the smallest cap justified by an actually repeatable failure mode; do not invent a universal number.
 - Write the pause triggers into the contract as a closed list, and pause only on one of them: repeated identical failure at the cap, a decision the contract itself names as still unsettled, an action outside granted permission, or scope beyond the approved objective. Anything not on that list is decided from the authorities and current state and recorded in the report, not escalated.
 - A blocked report should state cause, impact, and the condition for resuming.
-- Codex may stop when the operational end state is satisfied and report the evidence. Request final confirmation only where a named authority requires sign-off; otherwise the evidence report is the terminal state.
+- The agent may stop when the operational end state is satisfied and report the evidence. Request final confirmation only where a named authority requires sign-off; otherwise the evidence report is the terminal state.
 - Completion rests on the evidence the stopping condition names. When that evidence channel is unavailable, the accurate terminal state is a paused report carrying the cause and resume condition; weaker proxy evidence supports progress reporting, not completion.
 - Never infer permission for merge, push, deployment, publication, spending, or destructive actions from permission to pursue the goal.
 

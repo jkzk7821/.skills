@@ -1,6 +1,6 @@
 ---
 name: execute
-description: "Use when an inline contract prepared by goal-plan must be reviewed and then launched as a durable Codex objective, especially when its stopping condition, authority, or approval boundary should be checked before it starts running."
+description: "Use when an inline contract prepared by goal-plan must be reviewed and then launched as a durable objective, especially when its stopping condition, authority, or approval boundary should be checked before it starts running."
 ---
 
 # Execute
