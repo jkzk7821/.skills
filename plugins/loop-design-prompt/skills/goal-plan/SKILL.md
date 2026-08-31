@@ -16,6 +16,7 @@ Keep these distinctions:
 - User direction owns the requested outcome and the authorization.
 - Current source and reproducible evidence own current facts, and that same source owns the design already in place — data shapes and types, routes, layout and naming conventions, existing empty and error states, and the dependency set — whether or not a design or product document records it.
 - Repository instructions own local workflow, validation, and protected boundaries.
+- Skills and conventions retrievable in this environment own what a named control ordinarily does. A behaviour they settle enters the contract as a value carried from that named authority and recorded for override; where they leave it open, it stays with the source that owns it.
 - The prompt names mutable authority and derives task order, commands, retry policy, and roles from the current version of that authority.
 
 ## Size the work before shaping it
@@ -34,6 +35,8 @@ A structural count or format the request names settles the shape of that surface
 
 Prefer reconciliation against an external or current fact over self-authored assertions. Bind the expected value to a path independent of the code under test, so the comparison has two separate sides.
 
+Read each completion criterion against the cheapest implementation that would satisfy it. Where such an implementation satisfies the criterion and still leaves the request unmet, the criterion measures less than the behaviour it names, and it has room to grow until that implementation would fail it.
+
 ## Fit the design already in place
 
 Current source answers two separate questions: how far the work has progressed, and how the thing is already built. Read it for both, and name what the code has already settled so new work lands inside it rather than beside it. Where the request can be met only by departing from that established design, the departure is a scope decision the human owns rather than a detail settled while building.
@@ -42,9 +45,11 @@ Current source answers two separate questions: how far the work has progressed, 
 
 When an unresolved human decision and a size answer both apply, the human decision leads the result, because resolving it can change which prompt fits. Resolving it is a gate rather than a destination, so name the primitive each choice would unlock and carry the contract that approval would authorize, letting the human see in one place whether approving turns the work into a durable objective. Ask for that approval once: the package is the request, and an approved package enters the contract as settled values rather than a second confirmation.
 
+A choice the request itself frames as a named set of options is authorized inside that set, and a human-owned value whose approval channel is not reachable enters the contract as a recorded default carrying its pending state, so the objective proceeds while the decision stays visible and reversible for the human.
+
 Human-owned product, policy, safety, and permission choices take precedence over eventual task size. A vague qualitative change to a protected surface such as login, authentication, authorization, payments, or destructive controls stays a human decision. Source absence by itself leaves an otherwise clear size answer unchanged.
 
-For an approval package, offer the smallest complete set and only materially distinct alternatives, with three positive slots: the **requested acceptance surface** preserving the exact semantics and count of the stated observable outcomes, the **delegated implementation choices** covering observationally equivalent ways to realize them, and the **authorization effect** separating authority that approval activates from authority the human keeps.
+For an approval package, offer the smallest complete set and only materially distinct alternatives, with three positive slots: the **requested acceptance surface** preserving the exact semantics and count of the stated observable outcomes, the **delegated implementation choices** covering observationally equivalent ways to realize them, and the **authorization effect** separating authority that approval activates from authority the human keeps. A choice sits in the delegated slot when its alternatives are indistinguishable to the person who uses the outcome; where the alternatives differ in what that person observes and the request left the choice open, the choice belongs in the requested acceptance surface for the human to settle.
 
 ## What to return
 

@@ -130,7 +130,7 @@ A red answer to any row sends the contract back for revision.
 |---|---|---|---|
 | 1 | Wrong task shape causes endless work | Is this one finite objective, or a one-off task, indefinite monitor, or unrelated backlog? | Use the right primitive or split the goal. |
 | 2 | Vague or self-judged completion | Can current evidence answer done/not-done without “looks right”? | Add a verifiable end state and deterministic evidence. |
-| 3 | Verifier is gameable | Could the builder pass by weakening tests, boundaries, mocks, or acceptance criteria? | Pair the done criterion with protected boundaries and reconciliation. |
+| 3 | Verifier is gameable | Could the builder pass by weakening tests, boundaries, mocks, or acceptance criteria, or by satisfying them intact with the cheapest implementation that still leaves the request unmet? | Pair the done criterion with protected boundaries and reconciliation, and raise any criterion that a gaming implementation would satisfy just as well. |
 | 4 | Prompt becomes a stale shadow runbook | Does it duplicate mutable phases, task lists, commands, retry caps, or roles already owned elsewhere? | Point to the authority, define precedence, and derive from current state. |
 | 5 | Agent guesses a human decision | Is any policy, approval, scope, permission, or irreversible action unresolved at launch or runtime? | Resolve known choices first; encode a pause boundary for the rest. |
 | 6 | Acceptance surface drifts to a stand-in | Does the validated surface match the surface the user named, or a demonstration of it? | Re-anchor the objective and validation to the named surface, or return the surface choice to the human. |
